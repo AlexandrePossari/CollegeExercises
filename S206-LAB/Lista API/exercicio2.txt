@@ -1,0 +1,8 @@
+1. Os testes desenvolvidos são manuais ou automatizados?
+    São testes automatizados, pois eles realizam os passos necessário para conferir se a request está correta. Exemplo: ao escrever algo errado na URL para request, este deve retornar 404
+
+2. Alguns dos testes desenvolvidos são testes Fim-a-Fim (End-To-End)?
+    Testes E2E seriam testes que percorrem a aplicação inteira do ponto de vista do usuário, já que esta aplicação é apenas backend e sua API não cria nada, é apenas para teste (exemplo: ao criar um post ele te retorna o ID 101, porém ele não armazena isso), portanto podemos considerar que os testes são E2E. Se fosse possível realizar o fluxo de criar um post, fazer update, deletá-lo e etc, então teriamos que incrementar um pouco mais para ser um teste E2E
+
+3. O que se deve fazer para que os testes desenvolvidos funcionem em modo regressão?
+    Normalmente um teste de regressão é quando desenvolvemos uma feature nova ou refatoramos código e precisamos testar se ele não quebrou nada anterior. Para que estes testes funcionem em modo regressão, eles poderiam ser integrados a uma pipeline CI/CD para verificar se há erros nos testes após commits de novos códigos na aplicação. Ou simplesmente rodar os testes após novos códigos.
